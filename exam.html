@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link rel="stylesheet" href="assets/css/exam.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Exam</h1>
+        <div id="timer">Time left: <span id="time">02:00</span></div>
+        <div id="question-container">
+            <!-- Questions will be loaded here -->
+        </div>
+        <div id="navigation">
+            <button id="prev-btn" onclick="prevQuestion()">Previous</button>
+            <button id="skip-btn" onclick="skipQuestion()">Skip</button>
+            <button id="next-btn" onclick="nextQuestion()">Next</button>
+            <button id="submit-btn" onclick="submitExam()">Submit</button>
+        </div>
+        <div id="result-container" style="display: none;">
+            <h2>Results</h2>
+            <p id="score"></p>
+            <div id="answers"></div>
+            <button onclick="location.href='index.html'">Go to Home Page</button>
+        </div>
+    </div>
+    <script src="assets/js/exam.js"></script>
+</body>
+</html>

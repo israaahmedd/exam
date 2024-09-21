@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <!--link icons from fontawesome  -->
+  <script src="https://kit.fontawesome.com/5e3ae9ba74.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/signup.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+      <!-- name -->
+
+      <div>
+        <label for="userName" class="mb-1">Student Name <span class="star">*</span></label>
+        <div class="d-flex justify-content-between">
+          <input type="text" placeholder="First name" class="form-control w-50 mb-2 me-2 sName" name="name">
+          <input type="text" placeholder="Last name" class="form-control w-50 mb-2 sName" name="name">
+        </div>
+        <div id="nameAlert" class="alert alert-danger mb-2 d-none">
+          <p id="nameError" class="m-0">Name should start with an uppercase letter and be followed by lowercase letters.
+          </p>
+        </div>
+      </div>
+
+
+      <!-- email -->
+      <div>
+        <label for="email" class="mb-1">Email <span class="star">*</span></label>
+        <input type="text" placeholder="Enter your email" class="form-control mb-2" id="email">
+        <div id="emailAlert" class="alert alert-danger mb-2 d-none">
+          <p id="emailError" class="m-0">Please enter a valid email address.</p>
+        </div>
+      </div>
+
+
+      <!-- password -->
+
+      <div class="password">
+        <label for="password" class="mb-1">Password<span class="star">*</span></label>
+        <div>
+          <div class="mb-2 position-relative">
+            <input type="password" placeholder="please enter your password" id="password" class="form-control mb-2">
+            <span class="icon-pass"><i id="togglePassword" class="fa-solid fa-eye-slash"></i></span>
+          </div>
+          <div id="passwordAlert" class="alert alert-danger mb-2 d-none"  >
+            <p id="patternError" class="m-0" >Your password should have an upper
+              letter and the length should be between 5 and 20 characters.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="password">
+        <label for="confirmPassword" class="mb-1">Confirm Password<span class="star">*</span></label>
+        <div class="mb-2 position-relative">
+          <input type="password" placeholder="please confirm your password" id="confirmPassword" class="form-control mb-2">
+         
+        </div>
+        <div id="confirmPasswordAlert" class="alert alert-danger mb-2 d-none">
+          <p id="confirmPasswordError" class="m-0">Passwords do not match.</p>
+        </div>
+      </div>
+
+
+
+      <!-- <label for="password">Password:</label>
+            <input type="password" id="signupPassword" name="password"> -->
+
+      <button type="submit" id="submitBtn">Sign Up</button>
+    </form>
+    <p id="signupMessage" class="message"></p>
+  </div>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/signup.js"></script>
+</body>
+
+</html>
